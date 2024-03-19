@@ -4,6 +4,7 @@ import FunctionComp from "./components/FunctionalComponents";
 import ClassComp from "./components/ClassComponent";
 import { StudentName, StudentAge, StudentGrade } from "./components/NamedComponent";
 import { Click, Hover ,cl} from "./components/HireOrderComponents";
+import ParentComp from "./components/ParentComponent";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Click></Click>
       <Hover></Hover>
       <Demo></Demo>
+      <ParentComp></ParentComp>
     </div>
   );
 }
