@@ -1,8 +1,8 @@
-import React from React;
+import React from "react";
 
-class ClassComponent extends React.Component{
+class ClassComp extends React.Component{
     render(){
-        return
-        <p>This is a Class Component</p>
+        return <div><p><br/>This is a Class Component</p></div>;
     }
 }
+export default ClassComp;

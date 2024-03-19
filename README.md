@@ -16,4 +16,14 @@ learning react full course
 ### Create react App
 Commands include
 - npm install -g create-react-app
+- npx create-react-app [name of app] / create-react-app [name of app]
 
+# Components
+Can be:
+- Functional Components
+- Class Components
+
+## nested components
+Achieved by using the export (default and named) import key words
+- Default Components only export one component and can be renamed.
+- Named components can export multiple but cannot be renamed
