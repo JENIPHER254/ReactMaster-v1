@@ -6,6 +6,7 @@ import { StudentName, StudentAge, StudentGrade } from "./components/NamedCompone
 import { Click, Hover ,cl} from "./components/HireOrderComponents";
 import ParentComp from "./components/ParentComponent";
 import ClassProps from "./components/ClassProps";
+import FunctionProps from "./components/FunctionalProps";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <ClassProps name="learner 2" course="Flutter">
         <div><h4>Building Skills</h4><p>This is such an amazing experience</p></div>
       </ClassProps>
+      <FunctionProps name= "learner 3" course="HTML"/>
     </div>
   );
 }
