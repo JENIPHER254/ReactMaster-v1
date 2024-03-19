@@ -13,25 +13,32 @@ export class Click extends Component {
     });
   };
   render() {
-    const {count} = this.state;
-    return <p onClick={this.updateClick}>clicked <b>{count}</b> time</p>;
+    const { count } = this.state;
+    return (
+      <p onClick={this.updateClick}>
+        clicked <b>{count}</b> time
+      </p>
+    );
   }
 }
 export class Hover extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        count: 0,
-      };
-    }
-    updateHover = () => {
-      this.setState({
-        count: this.state.count + 1,
-      });
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
     };
-    render() {
-      const {count} = this.state;
-      return <p onMouseEnter={this.updateHover}>clicked <b>{count}</b> time</p>;
-    }
   }
-
+  updateHover = () => {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  };
+  render() {
+    const { count } = this.state;
+    return (
+      <p onMouseEnter={this.updateHover}>
+        clicked <b>{count}</b> time
+      </p>
+    );
+  }
+}
