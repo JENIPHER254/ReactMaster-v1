@@ -5,6 +5,7 @@ import ClassComp from "./components/ClassComponent";
 import { StudentName, StudentAge, StudentGrade } from "./components/NamedComponent";
 import { Click, Hover ,cl} from "./components/HireOrderComponents";
 import ParentComp from "./components/ParentComponent";
+import ClassProps from "./components/ClassProps";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
       <Hover></Hover>
       <Demo></Demo>
       <ParentComp></ParentComp>
+      <ClassProps name="learner 1" course="React"/>
+      <ClassProps name="learner 2" course="Flutter">
+        <div><h4>Building Skills</h4><p>This is such an amazing experience</p></div>
+      </ClassProps>
     </div>
   );
 }
