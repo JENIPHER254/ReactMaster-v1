@@ -28,3 +28,6 @@ Achieved by using the export (default and named) import key words
 - Default Components only export one component and can be renamed.
 - Named components can export multiple but cannot be renamed
 - Pure component is one that always renders the same output once hence significantly increasing response time.
+
+## states
+A state is an object that stores the values of properties belonging to  a component that could change over a period of time.
