@@ -25,25 +25,60 @@ class App extends React.Component{
     this.doThese = this.doThese.bind(this);
   }
   
+  //search method
+  search(term){
+    spotify.search(term).then(searchresults =>{
+      this.setState({searchresults: searchresults});
+    })
+  }
+  //add track method
+   addTrack(track){
+   let tracks = this.state.playlisttracks;
+   //if track is already saved
+   if (tracks.find(savedTrack => savedTrack.id === track.id)){
+    return;
+   }
+   tracks.push(track);
+   this.setState({playlisttracks: tracks});
+   }
+   // the remove track function
+   removeTrack(track){
+    let tracks = this.state.playlisttracks;
+    let tracksearch = this.state.searchresults;
+    // poping out the selected track from the list
+    tracks = tracks.filter(currenttrack => currenttrack.id !== track.id);
+    tracksearch.unshift(track);
+    this.setState({playlisttracks: tracks});
+    
+   }
+   removeTrackSearch(track){
+    let tracks = this.state.searchresults;
+    tracks = tracks.filter(currenttrack => currenttrack.id === track.id);
+    this.setState({searchresults:tracks});
+   }
+  doThese(track){
+    this.addTrack(track);
+    this.removeTrackSearch(track)
+  }
+  updataPlaylistName(name){
+    this.setState({updataPlaylistName: name}); 
+  }
+  savePlaylis(t){
+    const trrackurls =this.state.playlisttracks.map(track => track.url);
+    spotify.savePlaylis(this.state,playlistname,trrackurls).then(() =>{
+      this.setDate({
+        updataPlaylistName: "New Playlist",
+        playlisttracks:[],
+
+      });
+    });
+  }
 }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
     </div>
   );
 }
