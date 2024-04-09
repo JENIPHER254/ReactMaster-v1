@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import playlist from '../playlist/playlist';
-import searchbar from "../searchbar/searchbar";
+import Searchbar from '../searchBar/searchBar';
 import searchresults from "../searchresults/searchresults";
 import spotify from "../utils/spotify";
 
@@ -63,7 +63,7 @@ class App extends React.Component{
   updataPlaylistName(name){
     this.setState({updataPlaylistName: name}); 
   }
-  savePlaylis(t){
+  savePlaylis(){
     const trrackurls =this.state.playlisttracks.map(track => track.url);
     spotify.savePlaylis(this.state,playlistname,trrackurls).then(() =>{
       this.setDate({
@@ -78,7 +78,13 @@ class App extends React.Component{
 function App() {
   return (
     <div>
-      
+       <div className='App'>
+         <searchbar onSearch={this.search}/>
+         <div className='App-playlist'>
+            <searchresults searchresults = {this.state.searchresults} onAdd = {this.doThese}/>
+            <playlist playlisttracks = {this.state.playlisttracks} onNameChange = {this.updataPlaylistName} onRemove={this.removeTrack} onSave={this.savePlaylis}/>
+         </div>
+       </div>
     </div>
   );
 }
