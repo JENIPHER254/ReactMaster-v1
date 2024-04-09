@@ -79,7 +79,7 @@ function App() {
   return (
     <div>
        <div className='App'>
-         <searchbar onSearch={this.search}/>
+         <Searchbar onSearch={this.search}/>
          <div className='App-playlist'>
             <searchresults searchresults = {this.state.searchresults} onAdd = {this.doThese}/>
             <playlist playlisttracks = {this.state.playlisttracks} onNameChange = {this.updataPlaylistName} onRemove={this.removeTrack} onSave={this.savePlaylis}/>
