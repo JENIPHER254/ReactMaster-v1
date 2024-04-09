@@ -17,7 +17,7 @@ class Searchbar extends React.Component{
         this.setState({term: Event.AT_TARGET.valueOf})
     }
     search(){
-        this.props=onSearch(this.state.term)
+        this.props=onsearch(this.state.term)
     }
     handleEnter(event){
         if(event.keycode === 13){
@@ -28,7 +28,7 @@ class Searchbar extends React.Component{
         return (
         <div className="searchBar">
            <input placeholder="Enter song album or artist" onChange={this.handleTermChange} onKeyUp={this.handleEnter}/>
-           <Button className="searchButton" onclick={this.search}>SEARCH</Button>
+           <button className="searchButton" onClick={this.search}>SEARCH</button>
        </div>
     );
     

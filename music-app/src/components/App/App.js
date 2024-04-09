@@ -1,9 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
-import playlist from '../playlist/playlist';
-import Searchbar from '../searchBar/searchBar';
-import searchresults from "../searchresults/searchresults";
-import spotify from "../utils/spotify";
+
+import React from 'react';
+import Searchbar from "../searchbar/searchbar"
+import SearchResults from "../SearchResults/searchresults"
+import Playlist from "../Playlist/playlist"
+import spotify from "../../util/Spotify"
+
 
 class App extends React.Component{
   constructor(props){
@@ -63,30 +66,28 @@ class App extends React.Component{
   updataPlaylistName(name){
     this.setState({updataPlaylistName: name}); 
   }
-  savePlaylis(){
-    const trrackurls =this.state.playlisttracks.map(track => track.url);
-    spotify.savePlaylis(this.state,playlistname,trrackurls).then(() =>{
-      this.setDate({
+  savePlaylist(){
+    const trackuris =this.state.playlisttracks.map(track => track.uri);
+    spotify.savePlaylist(this.state.playlistname,trackuris).then(() =>{
+      this.setSate({
         updataPlaylistName: "New Playlist",
         playlisttracks:[],
 
       });
     });
   }
-}
-
-function App() {
+render(){
   return (
     <div>
        <div className='App'>
          <Searchbar onSearch={this.search}/>
          <div className='App-playlist'>
-            <searchresults searchresults = {this.state.searchresults} onAdd = {this.doThese}/>
-            <playlist playlisttracks = {this.state.playlisttracks} onNameChange = {this.updataPlaylistName} onRemove={this.removeTrack} onSave={this.savePlaylis}/>
+            <SearchResults searchresults = {this.state.searchresults} onAdd = {this.doThese}/>
+            <Playlist playlisttracks = {this.state.playlisttracks} onNameChange = {this.updataPlaylistName} onRemove={this.removeTrack} onSave={this.savePlaylis}/>
          </div>
        </div>
     </div>
-  );
+  )}
 }
 
 export default App;
