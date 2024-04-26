@@ -134,7 +134,7 @@ const layout = () => {
           <input
             type="button"
             value={"="}
-            className="button operator"
+            className="button equal-sign"
             onClick={handleClick}
           ></input>
           {/* ========================= section 1 ! ====================================== */}
