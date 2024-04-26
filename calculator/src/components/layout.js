@@ -5,11 +5,11 @@ function Layout  (props){
     const handleClick =() =>{};
     return (
       <div>
-           <Display></Display>
+        
   <div className="cont1">
-       
+ 
           <div className="main-calc">
-           
+          <Display></Display>
            <input value="C" type="button" className="button clear" onClick={handleClick}></input>
            <input value="DEL" type="button" className=" button delete" onClick={handleClick}></input>
            <input value="%" type="button" className="button operation" onClick={handleClick}></input>

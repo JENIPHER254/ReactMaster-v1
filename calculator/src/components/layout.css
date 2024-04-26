@@ -7,6 +7,7 @@ body{
 }
 .main-calc{
     width: 200px;
+   
 }
 .button{
     width: 50px;
@@ -20,4 +21,9 @@ body{
 }
 .equals{
     width: 100px;
+}
+input{
+    width: 177px;
+    padding: 10px;
+    text-align: right;
 }
