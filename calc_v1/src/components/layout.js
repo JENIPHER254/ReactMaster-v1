@@ -52,7 +52,7 @@ const Layout = () => {
     <div className="frame">
       <div className="calculator">
         <br></br>
-        <Output user={input} answere={result}/>
+        <Output user={input} answere={result} />
         <br></br>
 
         <img src={logo} width="100px" />
