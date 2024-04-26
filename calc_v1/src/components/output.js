@@ -1,11 +1,11 @@
 import React from "react";
 import OutputRow from "./outputRow";
 
-const Output = () => {
+const Output = props => {
     return (
         <div>
-            <OutputRow value={99} textSize={{fontsize: '20px'}}/>
-            <OutputRow value={100} textSize={{fontsize: '20px'}}/>
+            <OutputRow value={props.answere} textSize={{fontsize: '20px'}}/>
+            <OutputRow value={props.user} textSize={{fontsize: '20px'}}/>
         </div>
     );
 }

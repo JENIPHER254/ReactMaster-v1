@@ -1,15 +1,58 @@
-import React from "react";
+import React, {useState} from "react";
 import "./layout.css";
 import logo from "../assets/images/logo1.jpg";
 import Output from "./output";
 
-const layout = () => {
-  const handleClick = () => {};
+const Layout = () => {
+  let [input, setInput] = useState('0')
+  let [result, setResult] = useState('')
+
+  const handleClick = (event) => {
+    const value = event.target.value;
+
+    if(value === "="){
+      if(input !== ""){
+        let res = "";
+        try{
+          res = eval(input);
+        }catch(err){
+          setResult("math error");
+        }
+        if(res === undefined){
+          setResult("math error")
+        }else{
+          setResult(input + "=")
+          setInput(res)
+        }
+      }
+    }else if(value === "C" ){
+      setInput('0')
+      setResult('')
+    }else if(value === "DEL" ){
+      try{
+        let str = input;
+        str = str.substr(0, str.length-1);
+        setInput(str);
+        if(input === "0"){
+          setInput("0")
+      }
+     
+      }catch (err){
+        alert("CLEAR TO CONTINUE");
+      }
+    
+
+    }else if(input ==="0"){
+      setInput(value)
+    }else{
+      setInput(input += value)
+    }
+  };
   return (
     <div className="frame">
       <div className="calculator">
         <br></br>
-        <Output />
+        <Output user={input} answere={result}/>
         <br></br>
 
         <img src={logo} width="100px" />
@@ -150,4 +193,4 @@ const layout = () => {
   );
 };
 
-export default layout;
+export default Layout;
