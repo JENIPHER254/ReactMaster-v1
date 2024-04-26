@@ -8,7 +8,7 @@ const layout = () => {
     <div className="frame">
       <div className="calculator">
         <br></br>
-        <img src={logo} width="150px"/>
+        <img src={logo} width="100px"/>
         <div className="keys">
           {/* ========================= section 1 ======================================= */}
           <input
