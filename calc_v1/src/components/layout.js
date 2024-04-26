@@ -1,6 +1,7 @@
 import React from "react";
 import "./layout.css";
-import logo from "../assets/images/logo1.jpg"
+import logo from "../assets/images/logo1.jpg";
+import Output from "./output";
 
 const layout = () => {
   const handleClick = () => {};
@@ -8,7 +9,11 @@ const layout = () => {
     <div className="frame">
       <div className="calculator">
         <br></br>
-        <img src={logo} width="100px"/>
+        <Output />
+        <br></br>
+
+        <img src={logo} width="100px" />
+        <br></br>
         <div className="keys">
           {/* ========================= section 1 ======================================= */}
           <input

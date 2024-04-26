@@ -1,9 +1,12 @@
 import React from "react";
+import "./outputRow.css";
 
-const OutputReact = props =>{
+const OutputRow = props =>{
     return (
-        <div></div>
+        <div>
+            <input type="text" readOnly className="screen" style={props.textSize} value={props.value}></input>
+        </div>
     );
 }
 
-export default OutputReact;
+export default OutputRow;
