@@ -32,7 +32,7 @@ Achieved by using the export (default and named) import key words
 ## states
 A state is an object that stores the values of properties belonging to  a component that could change over a period of time.
 
-## React Master Commit Types
+## ReactMaster-v1 Commit Types
 
 1. init: initialization
      - Example: init: initializing app
