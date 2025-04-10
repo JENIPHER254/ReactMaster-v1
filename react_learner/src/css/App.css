@@ -1,25 +1,53 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: serif;
+* {
+  font-family: "Underdog", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
 }
-.header{
-  background-image: url('./../assets/server/server1.jpg');
+.header {
+  background-image: url("./../assets/server/server1.jpg");
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.header-cover{
-  background: url('./../assets/logo/background.png');
-  height: 100vh;
+.header-cover {
+  background: url("./../assets/logo/background.png");
+  min-height: 100vh;
+  max-height: fit-content;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.nav-width{
+.nav-width {
   width: 90%;
+}
+.main-row-header{
+  width: 100%;
+  padding-top: 4%;
+  padding-left: 7%;
+  font-size: 120%;
+}
+.contact-buttons{
+  padding: 0px;
+ 
+}
+@media screen and (max-width: 600px) {
+  .main-row-header{
+    width: 100%;
+    padding:15%;
+    padding-top: 7%;
+    font-size: 120%;
+  }
+  .fontsize1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-buttons{
+    padding: 0px;
+    padding: 60px;
+  }
+  
 }
