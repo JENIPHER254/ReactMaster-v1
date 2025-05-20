@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 * {
   font-family: "Underdog", system-ui;
   font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
 }
+
 .header {
   background-image: url("./../assets/server/server1.jpg");
   height: 90vh;
@@ -22,37 +23,68 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.header-title{
+.header-title {
   font-size: 15px;
 }
 .nav-width {
   width: 90%;
 }
-.main-row-header{
+.main-row-header {
   width: 100%;
   padding-top: 4%;
   padding-left: 7%;
   font-size: 120%;
 }
-.contact-buttons{
+.contact-buttons {
   padding: 0px;
- 
 }
 @media screen and (max-width: 600px) {
-  .main-row-header{
+  .main-row-header {
     width: 100%;
-    padding:15%;
+    padding: 15%;
     padding-top: 7%;
     font-size: 120%;
   }
-  .fontsize1{
+  .fontsize1 {
     margin-top: 10px;
     margin-bottom: 10px;
-  
   }
-  .contact-buttons{
+  .contact-buttons {
     padding: 0px;
     padding: 60px;
   }
-  
+}
+/* about us section */
+hr.short-line {
+  border: 1px solid green;
+  height: 2px;
+  width: 80px;
+  background: green;
+}
+.outer-cont {
+  border-top: 10px solid green;
+  border-right: 10px solid green;
+  width: 40%;
+  padding: 40px;
+}
+.inner-cont {
+  border-top: 10px solid rgb(198, 216, 198);
+  border-right: 10px solid rgb(198, 216, 198);
+  height: 25vh;
+  width: 100%;
+}
+.about-title{
+  padding-top: 120px;
+}
+.row{
+  width: 100%;
+}
+.FontAwesomeIcon{
+  color: green;
+}
+.card-title{
+  font-size: 20px;
+}
+.card-text{
+  width: 80%;
 }
