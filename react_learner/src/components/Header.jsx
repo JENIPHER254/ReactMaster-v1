@@ -58,7 +58,7 @@ function HeaderSection() {
         <div className="row main-row-header">
           <div className="col-sm-6">
             <br />
-            <div className=" text-light h6">WELCOME TO DATAPRANA</div> <br />
+            <div className=" text-light header-title">WELCOME TO DATAPRANA</div> <br />
             <div className="text-light h1 ">CONNECTING DATA AND ENERGY</div>
             <br />
             <div className="p text-light">

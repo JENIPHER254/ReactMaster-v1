@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 * {
   font-family: "Underdog", system-ui;
   font-weight: 400;
@@ -6,7 +7,7 @@
 }
 .header {
   background-image: url("./../assets/server/server1.jpg");
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,12 +15,15 @@
 }
 .header-cover {
   background: url("./../assets/logo/background.png");
-  min-height: 100vh;
+  min-height: 90vh;
   max-height: fit-content;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.header-title{
+  font-size: 15px;
 }
 .nav-width {
   width: 90%;
@@ -44,6 +48,7 @@
   .fontsize1{
     margin-top: 10px;
     margin-bottom: 10px;
+  
   }
   .contact-buttons{
     padding: 0px;
