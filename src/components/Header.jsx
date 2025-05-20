@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./../css/App.css";
+import "../css/App.css";
 
 function HeaderSection() {
   return (
@@ -58,7 +58,10 @@ function HeaderSection() {
         <div className="row main-row-header">
           <div className="col-sm-6">
             <br />
-            <div className=" text-light header-title">WELCOME TO DATAPRANA</div> <br />
+            <div className=" text-light header-title">
+              WELCOME TO DATAPRANA
+            </div>{" "}
+            <br />
             <div className="text-light h1 ">CONNECTING DATA AND ENERGY</div>
             <br />
             <div className="p text-light">
