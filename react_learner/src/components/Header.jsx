@@ -10,7 +10,7 @@ function HeaderSection() {
   return (
     <div className="header">
       <div className="header-cover ">
-        <div className="justify-content-center align-items-center d-flex">
+        <div className="justify-content-center inner-left align-items-center d-flex">
           <Navbar expand="lg" className="bg-body-transparent  nav-width ">
             <Container fluid>
               <Navbar.Brand href="#">

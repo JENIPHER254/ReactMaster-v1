@@ -1,6 +1,7 @@
 import "./../css/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Row, Col } from "react-bootstrap";
 import {
   faThumbsUp,
   faWandSparkles,
@@ -10,8 +11,8 @@ function AboutSection() {
   return (
     <>
       <div className="container">
-        <div className="row p-5 mb-2">
-          <div className="col-6 cont-left">
+        <Row className=" p-5 mb-2">
+          <Col className=" cont-left" xs={9} md={6}>
             <h1 className="text-left h1 about-title">About Us</h1>
             <hr className="short-line" />
             <p className="inner-text py-3">
@@ -19,24 +20,32 @@ function AboutSection() {
               Aspernatur dolores, nam quam dolore repellat voluptatibus
               veritatis non rem sed! Alias.
             </p>
-          </div>
-          <div className="col-6   main-cont d-flex justify-content-end align-items-start">
+          </Col>
+          <Col
+            className="main-cont d-flex justify-content-end align-items-start"
+            xs={3}
+            lg={6}
+          >
             <div className="outer-cont   d-flex justify-content-end align-items-start">
               <div className="inner-cont"></div>
             </div>
-          </div>
-        </div>
-        <div className="row px-5 mb-5">
-          <div className="col-4">
+          </Col>
+        </Row>
+        <Row className=" px-5 mb-5">
+          <Col sx={12} md={4}>
             <FontAwesomeIcon icon={faThumbsUp} className="FontAwesomeIcon" />
             <h3 className="text-left  card-title pt-4">
               Trusted <br />
               High-Quality service
             </h3>
             <hr className="short-line" />
-            <p className="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi perspiciatis amet voluptate maiores est enim beatae aliquid tenetur nobis?</p>
-          </div>
-          <div className="col-4">
+            <p className="card-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              perspiciatis amet voluptate maiores est enim beatae aliquid
+              tenetur nobis?
+            </p>
+          </Col>
+          <Col sx={12} md={4}>
             <FontAwesomeIcon
               icon={faWandSparkles}
               className="FontAwesomeIcon"
@@ -46,18 +55,26 @@ function AboutSection() {
               Control.
             </h3>
             <hr className="short-line" />
-            <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic ullam dignissimos aperiam reiciendis magnam voluptatibus nemo doloribus fuga.</p>
-          </div>
-          <div className="col-4">
+            <p className="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+              ullam dignissimos aperiam reiciendis magnam voluptatibus nemo
+              doloribus fuga.
+            </p>
+          </Col>
+          <Col sx={12} md={4}>
             <FontAwesomeIcon icon={faGear} className="FontAwesomeIcon" />
             <h3 className="text-left  card-title pt-4">
               Property <br />
               Ownership
             </h3>
             <hr className="short-line" />
-            <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos dolorum quis corporis dolores impedit hic alias vitae delectus repellendus beatae!</p>
-          </div>
-        </div>
+            <p className="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos
+              dolorum quis corporis dolores impedit hic alias vitae delectus
+              repellendus beatae!
+            </p>
+          </Col>
+        </Row>
       </div>
     </>
   );

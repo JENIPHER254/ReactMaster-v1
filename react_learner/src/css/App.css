@@ -8,7 +8,7 @@
 
 .header {
   background-image: url("./../assets/server/server1.jpg");
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@
 .contact-buttons {
   padding: 0px;
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .main-row-header {
     width: 100%;
     padding: 15%;
@@ -54,6 +54,7 @@
     padding: 60px;
   }
 }
+
 /* about us section */
 hr.short-line {
   border: 1px solid green;
@@ -73,18 +74,16 @@ hr.short-line {
   height: 25vh;
   width: 100%;
 }
-.about-title{
+.about-title {
   padding-top: 120px;
 }
-.row{
-  width: 100%;
-}
-.FontAwesomeIcon{
+
+.FontAwesomeIcon {
   color: green;
 }
-.card-title{
+.card-title {
   font-size: 20px;
 }
-.card-text{
+.card-text {
   width: 80%;
 }
